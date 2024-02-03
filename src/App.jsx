@@ -19,7 +19,7 @@ function App() {
             <Sidebar />
           </div>
           <div
-            className={`min-h-screen md:ml-[250px] px-[60px] bg-main-bg w-[1115px]`}
+            className={`min-h-screen md:ml-[250px] px-[60px] bg-gray-100 w-[1115px]`}
           >
             <div className="fixed md:static bg-main-bg navbar w-full">
               Navbar here

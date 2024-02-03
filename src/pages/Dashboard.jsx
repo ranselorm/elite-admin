@@ -5,6 +5,7 @@ import { IoCarSport } from "react-icons/io5";
 import { GrTransaction } from "react-icons/gr";
 import BarChart from "../components/charts/BarChat";
 import PieChart from "../components/charts/PieChart";
+import SalesPeopleTable from "../components/Table";
 
 const Dashboard = () => {
   return (
@@ -38,6 +39,9 @@ const Dashboard = () => {
       <div className="mt-10 flex gap-5 h-[300px]">
         <BarChart />
         <PieChart />
+      </div>
+      <div className="mt-10">
+        <SalesPeopleTable />
       </div>
     </div>
   );
