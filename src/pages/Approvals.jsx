@@ -1,5 +1,7 @@
 import React from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const approvalList = [
   {
@@ -49,20 +51,43 @@ const approvalList = [
 function Approvals() {
   return (
     <div className="">
-      <main className="mb-10">
-        <div className="flex justify-end gap-[20px]">
-          <div className="bg-white h-[30px] rounded overflow-hidden">
-            <input
-              type="text"
-              className="outline-none border-none h-full text-[12px] focus:outline-none pl-5"
-              placeholder="Search approval"
-            />
+      <main className="mb-4">
+        <div className="flex justify-between">
+          <h4 className="text-[16px] font-semibold">Approval</h4>
+          <div className="flex items-center gap-[20px]">
+            <div className="bg-white h-[30px] rounded overflow-hidden">
+              <input
+                type="text"
+                className="outline-none border-none h-full text-[12px] focus:outline-none pl-5"
+                placeholder="Search approval"
+              />
+            </div>
+            <div className="h-[30px] rounded overflow-hidden text-[12px] bg-blue-900 text-white px-2 py-1 cursor-pointer">
+              Add Filters
+            </div>
+            <div className="h-[30px] rounded overflow-hidden text-[12px] bg-gray-300 text-black px-2 py-1 cursor-pointer">
+              Refresh
+            </div>
           </div>
-          <div className="h-[30px] rounded overflow-hidden text-[12px] bg-blue-900 text-white px-2 py-1">
-            Add Filters
-          </div>
-          <div className="h-[30px] rounded overflow-hidden text-[12px] bg-gray-300 text-black px-2 py-1">
-            Refresh
+        </div>
+        <div className="flex gap-3 text-[13px] mt-2 pb-2 border-b border-gray-300 drop-shadow">
+          <h4>
+            Pending
+            <span className="bg-blue-500 w-10 h-2" />
+          </h4>
+          <h4>Approved</h4>
+          <h4>Rejected</h4>
+        </div>
+        <div className="mt-6 text-[12px] text-gray-400 flex items-center justify-between">
+          <div>Showing 1-10 results of 12</div>
+          <div className="flex items-center bg-white w-max px-1 py-[2px] rounded">
+            <span>
+              <MdKeyboardArrowLeft className="text-[19px] cursor-pointer" />
+            </span>
+            <span>1 of 2</span>
+            <span>
+              <MdKeyboardArrowRight className="text-[19px] cursor-pointer" />
+            </span>
           </div>
         </div>
       </main>
