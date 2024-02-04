@@ -9,6 +9,7 @@ import Users from "./pages/Users";
 import Approvals from "./pages/Approvals";
 import Trips from "./pages/Trips";
 import UserFeedback from "./pages/UserFeedback";
+import ApprovalDrawer from "./components/ApprovalDrawer";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             </div>
           </div>
         </div>
+        <ApprovalDrawer />
       </BrowserRouter>
     </div>
   );

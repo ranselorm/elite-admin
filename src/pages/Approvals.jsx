@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useStateContext } from "../context/StateContext";
 
 const approvalList = [
   {
@@ -49,6 +50,8 @@ const approvalList = [
 ];
 
 function Approvals() {
+  const { isOpen, setIsOpen } = useStateContext();
+
   return (
     <div className="">
       <main className="mb-4">
@@ -92,7 +95,10 @@ function Approvals() {
         </div>
       </main>
       {approvalList.map((approval) => (
-        <div className="bg-white flex justify-between px-4 py-[13px] border-b border-gray-200 rounded">
+        <div
+          className="bg-white flex justify-between px-4 py-[13px] border-b border-gray-200 rounded cursor-pointer"
+          onClick={() => setIsOpen(true)}
+        >
           <div className="flex justify-start gap-x-5 items-center w-full flex-1">
             <span className="text-sm">{approval.number}</span>
             <div className="w-2 h-2 bg-blue-500 rounded-full" />
